@@ -12,14 +12,14 @@ module main(clk, maq1_e0, maq2_e1, maq2_e0, sr, sn, sp, b1, b0, v1, v0, k, l, m,
 
 	divisor_de_clock(1,1,clk,clk_maquinas,clk_contador); 
 	
-	maq1(clk,sn,sr,sp,k,l,m,maq1_e0,ativacao_maq2);
-	maq2(clk,ativacao_maq2,b1,b0,v1,v0,x,y,z,maq2_e0,maq2_e1,t);
-	maq3(clk,t,maq3_e1,maq3_e0,p,o);
+	maq1(clk_maquinas,sn,sr,sp,k,l,m,maq1_e0,ativacao_maq2);
+	maq2(clk_maquinas,ativacao_maq2,b1,b0,v1,v0,x,y,z,maq2_e0,maq2_e1,t);
+	maq3(clk_maquinas,t,maq3_e1,maq3_e0,p,o);
 	
-	msg_loading(clk, k, l, m, x, y, z, ponto, ativacao_maq2);
-	led_e_buzzer(clk, x,y, z, p, o, led_vermelho, led_verde, led_azul, buzzer, ativacao_maq2);
+	msg_loading(clk_maquinas, k, l, m, x, y, z, ponto, ativacao_maq2);
+	led_e_buzzer(clk_maquinas, x,y, z, p, o, led_vermelho, led_verde, led_azul, buzzer, ativacao_maq2);
 	
-	main_contador(clk_contador,fj,fk,d1,d2,d3,d4,a,b,c,d,e,f,g,x,y,z,k,l,m);
+	main_contador(clk_contador,d1,d2,d3,d4,a,b,c,d,e,f,g,x,y,z,k,l,m);
 	
 
 endmodule
