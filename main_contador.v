@@ -10,12 +10,11 @@ module main_contador(clk,s1,s2,s3,s4,a,b,c,d,e,f,g,x,y,z,k,l,m,entrada);
 
 
 	contador(clk,fj,fk,A,B,1);
-	decodificador(B,A,s1,s2,s3,s4,1);
+	decodificador(B,A,s1,s2,s3,s4,1,x,y,z);
 
 	decodbebida(x,y,z,B,A,a_bebida, b_bebida, c_bebida, d_bebida, e_bebida, f_bebida, g_bebida);
 	decodsensor(k,l,m,B,A,a_sensor, b_sensor, c_sensor, d_sensor, e_sensor, f_sensor, g_sensor);
 
-	//mux_decodificador m1(entxada, a_bebida, b_bebida, c_bebida, d_bebida, e_bebida, f_bebida, g_bebida, a_sensor, b_sensor, c_sensor, d_sensor, e_sensor, f_sensor, g_sensor, a,b,c,d,e,f,g);
 	mux_decodificador m1(entrada, a_sensor, a_bebida, a);
 	mux_decodificador m2(entrada, b_sensor, b_bebida, b);
 	mux_decodificador m3(entrada, c_sensor, c_bebida, c);
