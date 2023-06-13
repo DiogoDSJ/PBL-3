@@ -15,7 +15,7 @@ module led_e_buzzer(clk, x,y, z, p, o, led_vermelho, led_verde, led_azul, buzzer
 	or(led_vermelho, s1);
 	or(led_verde, s1, s4);
 	or(led_azul, s3);
-	or(buzzer, s4);
+	nor(buzzer, s4);
 
 
 endmodule

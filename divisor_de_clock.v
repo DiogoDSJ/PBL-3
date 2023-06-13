@@ -1,7 +1,7 @@
 module divisor_de_clock(j,k,clk,saida1, saida2); // módulo de divisor de clock.
 	input k,j,clk;
 	output saida1, saida2;
-	wire s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24;
+	wire s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,s26,s27,s28;
 	
 	
 	
@@ -29,10 +29,14 @@ module divisor_de_clock(j,k,clk,saida1, saida2); // módulo de divisor de clock.
 	ffjk ff22(j,k,s21,s22); 
 	ffjk ff23(j,k,s22,s23);
 	ffjk ff24(j,k,s23,s24);
+	ffjk ff25(j,k,s24,s25);
+	ffjk ff26(j,k,s25,s26);
+	ffjk ff27(j,k,s26,s27);
+	ffjk ff28(j,k,s27,s28);
 	
 
-	assign saida1 = s24;
-	assign saida2 = s4;
+	assign saida1 = s28;
+	assign saida2 = s14;
 	
 	
 endmodule

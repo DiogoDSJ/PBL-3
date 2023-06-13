@@ -19,7 +19,7 @@ module main(clk, maq1_e0, maq2_e1, maq2_e0, sr, sn, sp, b1, b0, v1, v0, k, l, m,
 	msg_loading(clk_maquinas, k, l, m, x, y, z, ponto, ativacao_maq2);
 	led_e_buzzer(clk_maquinas, x,y, z, p, o, led_vermelho, led_verde, led_azul, buzzer, ativacao_maq2);
 	
-	main_contador(clk_contador,d1,d2,d3,d4,a,b,c,d,e,f,g,x,y,z,k,l,m);
+	main_contador(clk_contador,d1,d2,d3,d4,a,b,c,d,e,f,g,x,y,z,k,l,m,ativacao_maq2);
 	
 
 endmodule
